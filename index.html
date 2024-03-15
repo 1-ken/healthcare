@@ -99,14 +99,25 @@
                             Name:
                             <input type="text" id="name" placeholder="Enter your name" class="placeholder-wave"/>
                         </label>
-                        <label class="item" for="age">
-                            Age:
-                            <input type="number" id="age" name="age" min="18" max="70" placeholder="Enter your age" />
-                        </label>
-                        <label class="item" for="time">
-                            Convenient Time:
-                            <input type="time" id="time" min="07:00" max="18:00" placeholder="Enter your convenient time from 07:00am to 18:00pm " />
-                        </label>
+                        <form action="process_age.php" method="post">
+                            <span>Select your age group:</span><br>
+                            <label><input type="radio" name="age-group" value="0-17"> 0-17</label><br>
+                            <label><input type="radio" name="age-group" value="18-29"> 18-29</label><br>
+                            <label><input type="radio" name="age-group" value="30-49"> 30-49</label><br>
+                            <label><input type="radio" name="age-group" value="50-64"> 50-64</label><br>
+                            <label><input type="radio" name="age-group" value="65-above"> 65 or above</label><br>
+           
+                        </form>
+                        <form action="process_appointment.php" method="post">
+                            <div class="time-group">
+                                <span>Choose your time for your Appointment</span><br>
+                                <label><input type="radio" name="appointment-time" value="10:00"> 08:00-10:00 am</label><br>
+                                <label><input type="radio" name="appointment-time" value="10:00"> 10:00-12:00 pm</label><br>
+                                <label><input type="radio" name="appointment-time" value="10:30"> 12:00-02:00 pm</label><br>
+                                <label><input type="radio" name="appointment-time" value="11:00"> 02:00-04:00 pm</label><br>
+                                <label><input type="radio" name="appointment-time" value="11:30"> 04:00-06:30 pm</label><br>
+                            </div>
+                        </form>
                         <label class="item" for="description">
                             Problem Description:
                             <input type="text" id="description" placeholder="Describe your issue briefly" />
@@ -115,6 +126,11 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="footer">
+        <p>Contact us: </p>
+        <p>Email: info@example.com</p>
+        <p>Phone: 123-456-7890</p>
     </div>
 </body>
 </html>
